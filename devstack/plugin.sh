@@ -33,19 +33,9 @@ function pre_install_monasca_log {
 
 function install_monasca_log {
     install_logstash
-    configure_kafka
-    install_monasca_elasticsearch
-    configure_log_persister
-    configure_log_transformer
-    configure_log_metrics
-    install_monasca_log_api
-    install_kibana
 }
 
 function extra_monasca_log {
-    install_kibana_keystone_plugin
-    enable_log_management
-    add_log_api_service
     configure_log_agent
 }
 
